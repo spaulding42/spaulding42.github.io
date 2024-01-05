@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+        <script src="index.js"></script>
+    </head>
+    <style>
+        body{
+            background-image: url('Assets/pexels-fwstudio-129731.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+    <nav>
+        <a class="nav-btn btn-animate btn-slide" href="index.html">Home</a>
+        <a class="nav-btn btn-animate btn-slide" href="projects.html">Projects</a>
+        <a class="nav-btn btn-animate btn-slide" href="resume.html">Resume</a>
+        <a class="nav-btn btn-animate btn-slide" href="about.html">About Me</a>
+        <span class="nav-btn nav-current">Van Build</span>
+        <a class="nav-btn btn-animate btn-slide" href="contact.html">Contact Me</a>
+    </nav>
+    <body>
+        <header><h1>Van Build</h1></header>
+        <div class="van-description">
+            <p>I'm sure you are wondering why I would include a page that seemingly has nothing to do with a web dev portfolio. Well this is simply to show that I am not afraid to forge ahead and learn new things. I had no prior carpentry or construction experience prior to purchasing my van. I simply wanted to do it and knew I was resourceful enough to tackle the challenges along the way.</p>
+            <p>A career in web dev will require a person to constantly adapt to the changing industry. It requires someone who is willing to embrace change and learn how to make the new technologies work <span style="font-weight: bold;">for</span> them not against them.</p>
+            <p>Below, I've added a slideshow of how I did the van build. This is the first iteration and I have since remodled it a couple of times to fit my needs better but what I have here will show the basic layout and process for building an empty cargo van into a livable space.</p>
+        </div>
+        <div class="gallery">
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="finished van at sunset" class="van-pic-small" src="Assets\Van_Build\Van_Sunset.jpg" >
+                <img onclick= enlarge(this) alt="van swivel seats" class="van-pic-small" src="Assets\Van_Build\Swivel_Seats.jpg" >
+                <img onclick= enlarge(this) alt="empty van selfie" class="van-pic-small" src="Assets\Van_Build\Empty_Van_Selfie.jpg"  >
+                <img onclick= enlarge(this) alt="partial subfloor" class="van-pic-small" src="Assets\Van_Build\4_Partial_subfloor.jpg" >
+    
+            </div>
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="finished floor" class="van-pic-small" src="Assets\Van_Build\5_Finished_floor.jpg" >
+                <img onclick= enlarge(this) alt="fan hole" class="van-pic-small" src="Assets\Van_Build\6_Fan_Hole.jpg"  >
+                <img onclick= enlarge(this) alt="fan cutout prepped" class="van-pic-small" src="Assets\Van_Build\7_Fan_prepped.jpg" >
+                <img onclick= enlarge(this) alt="fan installed" class="van-pic-small" src="Assets\Van_Build\8_Fan_Installed.jpg" >
+    
+            </div>
+    
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="wall insulation" class="van-pic-small" src="Assets\Van_Build\9_Wall_Insulation.jpg"  >
+                <img onclick= enlarge(this) alt="ceiling wiring and insulation" class="van-pic-small" src="Assets\Van_Build\10_Ceiling_Wiring_Insulation.jpg" >
+                <img onclick= enlarge(this) alt="insulated walls plus bed frame" class="van-pic-small" src="Assets\Van_Build\11_Insulated_Walls_Bedframe.jpg" >
+                <img onclick= enlarge(this) alt="ceiling unfinished" class="van-pic-small" src="Assets\Van_Build\12_Ceiling_unfinished.jpg" >
+    
+            </div>
+    
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="finished ceiling (without poly)" class="van-pic-small" src="Assets\Van_Build\13_Finished_Ceiling.jpg" >
+                <img onclick= enlarge(this) alt="shelf install" class="van-pic-small" src="Assets\Van_Build\14_Shelf_Install.jpg" >
+                <img onclick= enlarge(this) alt="other shelf plus shiplap install" class="van-pic-small" src="Assets\Van_Build\15_Shiplap.jpg"  >
+                <img onclick= enlarge(this) alt="kitchen shiplap plus wall inserts" class="van-pic-small" src="Assets\Van_Build\16_Kitchen_Shiplap.jpg" >
+                
+            </div>
+            
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="mini fan hole" class="van-pic-small" src="Assets\Van_Build\17_Mini_Fan_Hole.jpg" >
+                <img onclick= enlarge(this) alt="mini fan installed (without cover)" class="van-pic-small" src="Assets\Van_Build\18_Mini_fan_installed.jpg" >
+                <img onclick= enlarge(this) alt="solar panels mounted between roof rack bars" class="van-pic-small" src="Assets\Van_Build\19_Solar_Panels.jpg"  >
+                <img onclick= enlarge(this) alt="under side of solar panels" class="van-pic-small" src="Assets\Van_Build\20_Solar_underside.jpg" >
+    
+            </div>
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="beginning cabinet install" class="van-pic-small" src="Assets\Van_Build\21_Cabinet_beginning.jpg" >
+                <img onclick= enlarge(this) alt="making drawers" class="van-pic-small" src="Assets\Van_Build\22_Drawer_Install.jpg" >
+                <img onclick= enlarge(this) alt="dry fit countertop before epoxy pour" class="van-pic-small" src="Assets\Van_Build\23_Dryfit_Countertop.jpg"  >
+                <img onclick= enlarge(this) alt="finished countertop plus drawer faces" class="van-pic-small" src="Assets\Van_Build\24_Finished_Countertop.jpg" >
+    
+            </div>
+            <div class="pic-row">
+                <img onclick= enlarge(this) alt="sink install" class="van-pic-small" src="Assets\Van_Build\25_Kitchen_Sink.jpg" >
+                <img onclick= enlarge(this) alt="bigger fridge slides out on drawer slides" class="van-pic-small" src="Assets\Van_Build\26_biggerFridge.jpg" >
+                <img onclick= enlarge(this) alt="couch area. Above is a twin sized bed" class="van-pic-small" src="Assets\Van_Build\27_couch.jpg"  >
+                <img onclick= enlarge(this) alt="completed kitchen area" class="van-pic-small" src="Assets\Van_Build\28_Finished_Kitchen.jpg" >
+    
+            </div>
+
+            <!-- <div class="pic-row">
+                <img onclick= enlarge(this) alt="" class="van-pic-small" src="" >
+                <img onclick= enlarge(this) alt="" class="van-pic-small" src="" >
+                <img onclick= enlarge(this) alt="" class="van-pic-small" src=""  >
+                <img onclick= enlarge(this) alt="" class="van-pic-small" src="" >
+    
+            </div> -->
+
+        </div>
+
+        <!-- <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/311408215_10160499894762299_1080154976963078689_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=49d041&_nc_ohc=jJEdfT1cVA8AX8E_Gy4&_nc_ht=scontent-mia3-1.xx&oh=00_AfAm1OLkUw85jBfqiQbZC7kk3oWk--N6zM-zSbgseiezlg&oe=651465DF" alt="van sunset" class="van-pic-small"> -->
+        <div id="black-overlay" onclick= shrink(this) class="img-zoom" hidden>
+            <p class="white-text">click to shrink</p>
+            <p id="enlarged-alt" class="white-text"></p>
+            <img onclick= shrink(this) id="enlarged-pic" src="" alt="" hidden>
+        </div>
+    </body>
+</html>

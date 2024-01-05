@@ -1,0 +1,470 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: large; */
+}
+:root {
+    --gradient: linear-gradient(45deg, white, lightblue, rgb(4, 176, 233));
+    --graygradient: linear-gradient(45deg, white, rgb(182, 182, 182),rgb(80, 80, 80), black);
+}
+
+.background{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.raindrops{
+    background-image: url('Assets/pexels-gabriel-peter-696644.jpg');
+}
+
+.notebook-plant{
+    background-image: url('Assets/pexels-tirachard-kumtanom-733852.jpg');
+}
+
+.construction{
+    background-image: url('Assets/Security_App_Demo/construction_bg.jpg');
+}
+
+
+/* generic css ----------------------------------------------*/
+.center-60{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.center{
+    text-align: center;
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+
+.margin-lr{
+    margin-left: 15px;
+    padding-right: 15px;
+}
+
+.white-text{
+    color: white;
+}
+
+header > h1{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+body {
+    margin-top: 100px;
+}
+
+/* Nav bar ----------------------------------------------*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.nav-btn{
+    background-image: var(--gradient);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1.25s;
+    
+    --background-color: rgb(157, 210, 228);
+    --border-size: 2px;
+  
+  }
+  
+  
+  /* border slides out around box on hover*/
+  .nav-btn.btn-animate::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    cursor: pointer;
+    border: var(--border-size) solid var(--background-color);
+    transition: top,left,right,bottom 100ms ease-in-out;
+  }
+  
+  .nav-btn.btn-animate:hover::before,
+  .nav-btn.btn-animate:focus::before{
+    top: calc(var(--border-size)* -2);
+    left: calc(var(--border-size)* -2);
+    right: calc(var(--border-size)* -2);
+    bottom: calc(var(--border-size)* -2);
+  }
+
+.nav-current{
+    
+    background-image: linear-gradient(to left bottom, white , rgb(157, 210, 228));
+}
+
+.nav-fill {
+    background-image: linear-gradient(to left bottom, black, white);
+    opacity: 0.9;
+    z-index: 10;
+    visibility: visible;
+}
+
+nav > a {
+    margin: 20px;
+
+}
+
+nav > span {
+    margin: 20px;
+}
+
+/* Home Page -------------------------------------------------- */
+.home-body{
+    margin-top: 0px;
+}
+
+.landing{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.landing-pic{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: -100;
+}
+
+.landing-text{
+    text-align: center;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+    margin-top: 20vw;
+    margin-bottom: 45vw;
+    margin-left: 45%;
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    padding: 1.5vw;
+    font-weight: bold;
+
+    
+}
+
+.home-startingtext {
+    padding-top: 10vw;
+}
+.main-pic{
+    width: 25%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.dojo-logo{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    transition: 100ms ease-in-out;
+}
+
+.dojo-logo-box{
+    width: 21%;
+    padding: left 10px;
+}
+
+.dojo-logo:hover{
+    
+    border: 2px solid #222;
+    box-shadow: 3px 4px black;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.text-box{
+    border: 3px solid black;
+    border-radius: 25px;
+    background-color: #333;
+    padding: 1%;
+    opacity: 0.8;
+    transition: 200ms ease-in-out;
+}
+
+.text-box:hover{
+    opacity: 0.9;
+    box-shadow: 5px 10px #111;
+    transition: 200ms ease-in-out;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    transition: 200ms ease-in-out;
+    
+}
+
+.icon:hover{
+    transform: scale(1.3);
+}
+
+.icon-box{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* resume page css --------------------------------------------*/
+.projects-box{
+    margin-left: 20%;
+    width: 60%;
+    justify-content: center;
+    
+}
+
+.job-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-indent{
+    margin-left: 25px;
+}
+
+.question-info{
+   
+    height: 20px;
+    width: 20px;
+}
+.bb-toggle{
+    position: relative;
+    display: inline-block;
+}
+.bb-info{
+    visibility: hidden;
+    background-color: #222;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.9;
+    transition: 100ms ease-in-out;
+}
+
+.bb-toggle:hover .bb-info{
+    visibility: visible;
+}
+
+.fade {
+    background-image: linear-gradient(to right top, rgb(157, 210, 228), gray);
+}
+
+
+.btn-slide:hover,
+.btn-slide:focus{
+    background-position: right;
+}
+
+/* Van build section ---------------------------------------------------*/
+.van-pic-small{
+    height: auto;
+    width: 20vw;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 1px 1px rgb(71, 47, 15);
+    border: 3px solid black;
+    transition: 100ms ease-in;
+
+    position: relative;
+}
+
+.van-pic-small:hover{
+    box-shadow: 7px 7px rgb(71, 47, 15);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.gallery{
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+#enlarged-pic{
+    height: 75%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.img-zoom{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    text-align: center;
+    z-index: 20;
+    
+}
+
+.pic-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 30vw;
+}
+
+.van-description{
+    background-color: wheat;
+    border: 2px solid black;
+    font-size: large;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    margin:10px 50px;
+    opacity: 0.3;
+    box-shadow: 2px 2px rgb(71, 47, 15);
+
+    transition: 200ms ease-in;
+}
+.van-description:hover{
+    opacity: 1;
+    box-shadow: 5px 5px rgb(71, 47, 15);
+}
+
+
+/* About page ---------------------------------------------------------*/
+.selfie-box{
+    content: '';
+    width: 23vw;
+    height: auto;
+    /* border: 3px solid black; */
+    float: left;
+}
+.about-selfie{
+    border-radius: 100%;
+    height: auto;
+    width: 20vw;
+
+    transition: 300ms ease-in-out;
+}
+
+.about-selfie:hover{
+    transform: scale(1.05);
+    border-radius: 1%;
+}
+
+.about-header{
+    width: 15vw;
+    margin: auto;
+    
+    border: 1px solid #222;
+    border-radius: 5px;
+    opacity: 0.8;
+    background-image: var(--graygradient);
+    color: #222;
+        
+    position: relative;
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1s;
+}
+
+.about-header:hover{
+    background-position: right;
+    color: white;
+}
+
+.about-content{
+    margin: 100px 10px;
+}
+
+
+/* PROJECTS PAGE ------------------------------------------------------*/
+
+.img-video{
+    width: 25vw;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+/* scroller CSS */
+.img-scroller{
+    width: 15vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.scroller{
+    max-width: 70%;
+    border: 3px solid blue;
+    margin: auto;
+}
+
+.inner-scroller{
+    display: flex;
+    gap: 1rem;
+    padding-block: .5rem;
+    flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+    mask: linear-gradient(90deg, transparent,  white 15%, white 85%, transparent);
+}
+
+.scroller[data-animated="true"] .inner-scroller{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s var(--scroll-direction, forwards) linear infinite;
+    
+}
+
+.scroller[data-direction ="right"]{
+    --scroll-direction: reverse;
+}
+
+.scroller[data-direction = "left"]{
+    --scroll-direction: forwards;
+}
+
+@keyframes scroll{
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+/* END Scroller CSS */

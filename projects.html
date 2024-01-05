@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <nav>
+        <a class="nav-btn btn-animate btn-slide" href="index.html">Home</a>
+        <span class="nav-btn nav-current">Projects</span>
+        <a class="nav-btn btn-animate btn-slide" href="resume.html">Resume</a>
+        <a class="nav-btn btn-animate btn-slide" href="about.html">About Me</a>
+        <a class="nav-btn btn-animate btn-slide" href="vanbuild.html">Van Build</a>
+        <a class="nav-btn btn-animate btn-slide" href="contact.html">Contact Me</a>
+    </nav>
+    <body class="background construction">
+        <header><h1>Projects</h1></header>
+        
+        <h2 class="center">Security App</h2>
+        <p class="center-60">Before making the leap into coding, I had been working in the alarm industy for 17+ years. I built this app to simulate the actions needed to properly track customers, accounts, and equipment for the alarm company. </p>
+        <p class="center-60">This app utilizes the following technologies:</p>
+        <ul class="center-60">
+            <li>C#/.NET</li>
+            <li>Bootstrap and CSS</li>
+            <li>JavaScript</li>
+            <li>A robust MySQL Database consisting of 4 separate tables all working together</li>
+            <li>MySQL Workbench</li>
+            <li><a href="https://github.com/spaulding42/C-Sharp2/tree/52d107f3be4b85bc6f57d813d6016c8e4402d215/SecurityApp" target="_blank"> GitHub</a></li>
+        </ul>
+        <h3 class="center">Video Demo:</h3>
+        <!-- Video Demo Link Security Company -->
+        <a href="https://www.loom.com/share/7859cd4e98884b15999978d24054505a?sid=2ecd2ce4-7ff2-4522-91df-07c9674fe7c0" target="_blank" class="img-video"><img src="Assets\Security_App_Demo\Video.png" alt="Play Video" class="img-video"></a>
+        
+        <!-- Images for Security Company -->
+        <h4 class="center">Image Slideshow</h4>
+        <div class="scroller" data-direction="left">
+            <div class="inner-scroller" >
+                <img alt="List all inventory with sort by category buttons" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Inventory_All_Installed.png" >
+                <img alt="Login/Registration with full form validation" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Login_Reg_Validation.png" >
+                <img alt="Profile page. Can change password, delete, or update user data" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Profile.png" >
+                <img alt="Salesman can view his account and edit customer or account" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Sales_View_Account.png" >
+                <img alt="Shows Tech all personal installs and allows for new/edit install" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Tech_Dashboard.png" >
+                <img alt="Allows tech to add equipment, verify signals, and finish install" class="img-scroller" onclick= enlarge(this) src="Assets\Security_App_Demo\Tech_Install.png" >
+                
+            </div>
+        </div>
+
+        <h2 class="center">#Vanlife App</h2>
+        <p class="center-60">Over the past few years, I've been interested in the Vanlife movement. I built an empty cargo van into a livable camper van and built an app to showcase how to build a van and have a forum where other Vanlifers can ask questions and interact with one another.</p>
+        <p class="center-60">This app utilizes the following technologies:</p>
+        <ul class="center-60">
+            <li>C#/.NET</li>
+            <li>Bootstrap and CSS</li>
+            <li>A robust MySQL Database consisting of Users, Posts, and Comments</li>
+            <li>MySQL Workbench</li>
+            <li>Google APIs to pin locations on a map</li>
+            <li><a href="https://github.com/spaulding42/C-Sharp/tree/main/Vanlife" target="_blank">GitHub</a></li>
+        </ul>
+        <h3 class="center">Video Demo:</h3>
+        <!-- Video Demo Link #Vanlife app -->
+        <a href="https://www.loom.com/share/053acacffdbb4256981befdd5fb1f25e?sid=1f20c74d-3ef9-4c79-a5af-970d63b7a0af" target="_blank" class="img-video"><img src="Assets\Vanlife\Video.png" alt="Play Video" class="img-video"></a>
+        
+        <!-- Images for Vanlife -->
+        <h4 class="center">Image Slideshow</h4>
+        <div class="scroller" data-direction="right">
+            <div class="inner-scroller" >
+                <img alt="Login/Register page with full form validation" class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\LoginReg.png" >
+                <img alt="View All Posts" class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\posts.png" >
+                <img alt="View Comment section for a single post" class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\Comments.png" >
+                <img alt="Camping Ideas on where to go. List state parks" class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\camping.png" >
+                <img alt="Viewing one state's state parks. Can click a park to google search it. All parks are pinned on map" class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\StateParks.png" >
+                <img alt="How to build a camper Van from start to finish." class="img-scroller" onclick= enlarge(this) src="Assets\Vanlife\Vanbuilds.png" >
+                
+            </div>
+        </div>
+
+        <div id="black-overlay" onclick= shrink(this) class="img-zoom" hidden>
+            <p class="white-text">click to shrink</p>
+            <p id="enlarged-alt" class="white-text"></p>
+            <img onclick= shrink(this) id="enlarged-pic" src="" alt="" hidden>
+        </div>
+    
+    </body>
+    
+
+
+    <script src="index.js"></script>
+</html>
